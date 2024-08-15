@@ -30,4 +30,6 @@ flask_app/
 ├── static/
 ├── requirements.txt
 └── README.md
-
+Na hora de fazer a integração no banco de dados, você terá problemas, então peça ajuda ao CHAT GPT, ele foi meu grande amigo nessa façanha, é tipo eu sonho e idealizo e ele bota a mão na massa.
+3º Na hora de estilizar, lembrar que o arquivo css, o STYLE.CSS ficará dentro da pasta STATIC, que ficará dentro da pasta Flask_app.
+4º O banco de dados é o arquivo chamado PESSOAS.DB, que ficará dentro da pasta INSTANCE que é criada no momento que você executar o projeto, ou seja, subir o servidor EXECUTANDO o arquivo APP.PY, se der erro, peça ajuda no chat gpt, copie e cola o erro nele que você será bem atendido, siga as instruções que vai dar certo. Comigo deu e nem sou lá essas coca cola na programação.

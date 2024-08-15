@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IRPF</title>
+</head>
+<body>
+    <h1>Calculadora de Imposto de Renda</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if resultado is defined %}
+        <p>Olá, {{ nome }}!</p>
+        <p>Profissão: {{ profissao }}</p>
+        <p>Seu salário bruto é: R$ {{ salario_bruto }}</p>
+        <p>O valor do imposto calculado foi: R$ {{ imposto }}</p>
+        <p>Seu salário líquido após o imposto é: R$ {{ salario_liquido }}</p>
+        <button onclick="window.history.back()">Voltar</button>
+    {% else %}
+        <form method="post">
+            <label for="nome">Digite seu nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="profissao">Digite sua profissão:</label><br>
+            <input type="text" id="profissao" name="profissao" required><br><br>
+
+            <label for="salario">Digite o salário:</label><br>
+            <input type="text" id="salario" name="salario" required placeholder="Ex: 1.000,00"><br><br>
+            
+            <label for="aliquota">Escolha a alíquota de imposto:</label><br>
+            <select id="aliquota" name="aliquota" required>
+                <option value="5">5%</option>
+                <option value="10">10%</option>
+                <option value="15">15%</option>
+                <option value="20">20%</option>
+                <option value="30">30%</option>
+            </select><br><br>
+            
+            <input type="submit" value="Calcular">
+        </form>
+    {% endif %}
+
+    <footer>
+        <hr>
+        <p>Desenvolvedor: Roberto Silva - 2024 - Direitos Autorais reservados.</p>
+    </footer>
+</body>
+</html>
